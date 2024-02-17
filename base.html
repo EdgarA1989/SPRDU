@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultas a Bases de datos</title>
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/base.css" />
+    <script src="JS/base.js" defer></script>
+    <script src="JS/index.js" defer></script>
+  </head>
+  <body>
+    <div class="primer_contenedor">
+      <main class="main_contenedor">
+        <div class="sidebar_contenedor">
+          <div class="logo_sube">
+            <a href="index.html">
+              <img src="IMG/logo_sube.png" alt="Logo Sube"
+            /></a>
+          </div>
+          <a class="sidebar_menu" href="#">Total Lineas</a>
+          <a class="sidebar_menu" href="base.html">Base de datos</a>
+          <a class="sidebar_menu" href="cargafw.html">Carga FW3000</a>
+          <a class="sidebar_menu" href="#">Nosotros</a>
+        </div>
+        <div class="pantalla_principal">
+          <!--  Formulario de seleccion de empresa del cual se tomaran los datos necesarios para la conexion. -->
+
+          <div class="empresa_contenedor">
+            <h1>Elegir Empresa:</h1>
+            <div class="empresa_busqueda">
+              <form class="formulario_general">
+                <label for="id_concentrador">ID Concentrador</label>
+                <select name="idEmpresa" id="id_concentrador">
+                  <option value="" disabled selected>
+                    Selecciona una opción
+                  </option>
+                </select>
+
+                <label for="domicilio">Domicilio</label>
+                <input
+                  type="text"
+                  disabled
+                  selected
+                  value=""
+                  id="domicilio"
+                  placeholder="************"
+                />
+              </form>
+            </div>
+          </div>
+
+          <div class="empresa_contenedor">
+            <h1>Elegir Consulta:</h1>
+            <div class="empresa_busqueda">
+              <form class="formulario_general">
+                <label for="id_empresa">Consultar Por</label>
+                <select name="idBase" id="id_base">
+                  <option value="" disabled selected>
+                    Selecciona una opción
+                  </option>
+                  <option value="VersionActiva">Versiones Disponibles</option>
+                  <option value="Updated">Versiones Descargadas</option>
+                  <option value="versionesRegistradas">
+                    Versiones Registradas
+                  </option>
+                </select>
+
+                <span class="span_base" style="display: none"></span>
+              </form>
+            </div>
+          </div>
+
+          <!--Formuluario para consultas SQL-->
+
+          <div class="consulta_busqueda_versionactiva">
+            <form action="" class="formulario_versionactiva formulario_general"
+            id="form">
+              <div class="empresa_consulta_contenedor">
+                <label for="id_empresa">ID Empresas</label>
+                <select name="idEmpresa" id="id_empresa_versionactiva">
+                    
+                  <option value="">Selecciona una opción</option>
+                  <option value="empresa_todos">Todos</option>
+                </select>
+              </div>
+
+              <div class="version_updated">
+                <label for="version">Version</label>
+                <select name="opcionVersion" id="opcionVersion">
+                    <option value="" disabled selected>
+                      Selecciona una opción
+                    </option>
+                    <option value="Todos">Todos</option>
+                    <option value="PorVersion">Por Version/nes</option>
+                </select>
+                
+              </div>
+              <div class="mas_version">
+                <input type="text" id="version" disabled required></input>
+                <span class="span_mas">+</span><span class="span_menos">-</span>
+              </div>
+              <div class="interno_updated">
+                <label for="idTerminal">Interno</label>
+                <select name="opcionInterno" id="opcionInterno">
+                    <option value="" disabled selected>
+                      Selecciona una opción
+                    </option>
+                    <option value="Todos">Todos</option>
+                    <option value="PorInterno">Por Interno/s</option>
+                </select>
+              </div>
+              <div class="mas_internos">
+              <input type="text"  id="idTerminal" disabled required></input>
+              <span class="span_mas">+</span><span class="span_menos">-</span>
+            </div>
+              <div class="checkbox_contenedor_titulodispositivo">
+                <h3>Dispositivo</h3>
+              </div>
+              <div class="checkbox_contenedor_dispositivo">
+                <label>
+                  <input
+                    class="dispositivo_iddispositivo"
+                    type="checkbox"
+                    name="opcion"
+                    value="Laser 3080"
+                  />
+                  Laser 3080
+                </label>
+                <label>
+                  <input
+                    class="dispositivo_iddispositivo"
+                    type="checkbox"
+                    name="opcion"
+                    value="Laser 3075"
+                  />
+                  Laser 3075
+                </label>
+                <label>
+                  <input
+                    class="dispositivo_iddispositivo"
+                    type="checkbox"
+                    name="opcion"
+                    value="Laser 3090"
+                  />
+                  Laser 3090
+                </label>
+                <label>
+                  <input
+                    class="dispositivo_iddispositivo"
+                    type="checkbox"
+                    name="opcion"
+                    value="Tallion"
+                  />
+                  Tallion
+                </label>
+                <label>
+                  <input
+                    class="dispositivo_iddispositivo"
+                    type="checkbox"
+                    name="opcion"
+                    value="Sonda"
+                  />
+                  Sonda
+                </label>
+                <label>
+                  <input
+                    class="dispositivo_iddispositivo iddispositivo"
+                    type="checkbox"
+                    name="opcion"
+                    value="Todos"
+                  />
+                  Todos
+                </label>
+              </div>
+
+              <div class="checkbox_contenedor_titulo">
+                <h3>Archivo</h3>
+              </div>
+              <div class="checkbox_contenedor_opciones">
+                <label>
+                  <input
+                    class="dispositivo_tipoupdate"
+                    type="checkbox"
+                    name="opcion"
+                    value="EOD"
+                  />
+                  EOD
+                </label>
+                <label>
+                  <input
+                    class="dispositivo_tipoupdate"
+                    type="checkbox"
+                    name="opcion"
+                    value="LIN"
+                  />
+                  LIN
+                </label>
+                <label>
+                  <input
+                    class="dispositivo_tipoupdate"
+                    type="checkbox"
+                    name="opcion"
+                    value="HOT"
+                  />
+                  HOT
+                </label>
+                <label>
+                  <input
+                    class="dispositivo_tipoupdate"
+                    type="checkbox"
+                    name="opcion"
+                    value="FW"
+                  />
+                  FW
+                </label>
+                <label>
+                  <input
+                    class="dispositivo_tipoupdate tipo_update"
+                    type="checkbox"
+                    name="opcion"
+                    value="tipoUpdate"
+                  />
+                  Todos
+                </label>
+              </div>
+
+            
+
+              <button type="submit" class="button_enviar">CONSULTAR</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

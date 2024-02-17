@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:wght@700&family=Roboto+Condensed:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Rubik&display=swap");
+
+/*Animaciones*/
+@keyframes sidebarOpciones {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+html,
+body {
+  height: 100%; /* Asegurar que el HTML y el body ocupen toda la altura */
+}
+
+.primer_contenedor {
+  height: 100vh;
+  display: flex;
+  overflow-x: auto;
+}
+
+.main_contenedor {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+}
+
+.sidebar_contenedor {
+  position: fixed;
+  width: 16rem;
+  height: 100%;
+  background-color: #5ac1f8;
+  display: grid;
+  grid-template-rows: 10rem repeat(4, 3rem) 1fr;
+}
+
+.logo_sube {
+  background-color: rgb(221, 244, 253);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_sube img {
+  width: 7rem;
+  z-index: 1;
+  &:hover {
+    animation: sidebarOpciones 2s ease 0s 1 normal forwards;
+  }
+}
+
+.sidebar_menu {
+  padding: 1.7rem;
+}
+
+.sidebar_contenedor a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: rgb(7, 7, 7);
+  &:hover {
+    font-size: 1.7rem;
+    animation: sidebarOpciones 1.6s ease 0s 1 normal forwards;
+  }
+}
+
+.pantalla_principal {
+  margin-left: 16rem;
+}

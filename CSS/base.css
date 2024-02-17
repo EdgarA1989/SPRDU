@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:wght@700&family=Roboto+Condensed:ital@1&family=Roboto:ital,wght@0,100;0,400;1,100&family=Rubik&display=swap");
+
+.principal_base {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 13rem 13rem 1fr;
+}
+
+.empresa_contenedor {
+  display: grid;
+  grid-template-rows: 6rem 6rem;
+  margin-left: 4rem;
+}
+
+.empresa_contenedor h1 {
+  align-self: center;
+  margin-left: 1rem;
+}
+
+.empresa_busqueda {
+  display: grid;
+  grid-template-columns: 60rem 1fr;
+}
+
+.formulario_general {
+  height: 6rem;
+  background-color: #5ac1f8;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  box-shadow: 13px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 13px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 13px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.formulario_general label {
+  margin-left: 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.formulario_general select {
+  font-size: 1.1rem;
+  height: 1.6rem;
+  border-radius: 107px 107px 107px 107px;
+  -webkit-border-radius: 107px 107px 107px 107px;
+  -moz-border-radius: 107px 107px 107px 107px;
+}
+
+option,
+input[type="text"] {
+  font-size: 1rem;
+  height: 1.6rem;
+  border-radius: 107px 107px 107px 107px;
+  -webkit-border-radius: 107px 107px 107px 107px;
+  -moz-border-radius: 107px 107px 107px 107px;
+}
+
+input[type="text"] {
+  background-color: #fff;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+/*Consultas Base de datos*/
+
+.span_base {
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.consulta_busqueda_versionactiva {
+  display: none;
+}
+.consulta_busqueda_updated {
+  display: none;
+}
+
+.consulta_busqueda {
+  height: 12rem;
+}
+
+.formulario_versionactiva {
+  margin: 4rem;
+  width: 60rem;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: repeat(2, 14rem) 16rem 1fr;
+  grid-template-rows: 3.6rem 3.6rem 3.6rem 3.6rem 6rem;
+  height: 19rem;
+}
+
+.empresa_consulta_contenedor {
+  grid-row: 3/4;
+  grid-column: 1/3;
+}
+
+.version_updated {
+  display: none;
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+
+.interno_updated {
+  display: none;
+  grid-row: 4/5;
+  grid-column: 1/3;
+  margin-bottom: 1rem;
+}
+
+.mas_internos {
+  position: relative;
+  bottom: 3rem;
+  left: 4.2rem;
+  display: none;
+  grid-row: 5/6;
+  grid-column: 1/3;
+}
+
+.mas_version {
+  position: relative;
+  bottom: 1rem;
+  left: 4.2rem;
+  display: none;
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
+
+.span_mas {
+  position: relative;
+  margin-left: 1rem;
+  font-size: 3rem;
+  color: #fff;
+  top: 0.5rem;
+  padding-right: 1rem;
+  font-weight: 600;
+}
+
+#idTerminal,
+#version {
+  width: 4rem;
+}
+
+.span_menos {
+  position: relative;
+  top: 0.5rem;
+  margin-left: 1.5rem;
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.span_internos {
+  grid-row: 4/5;
+  display: flex;
+  width: 100%;
+}
+
+.checkbox_contenedor {
+  grid-row: 1/4;
+  grid-column: 3/5;
+}
+
+.checkbox_contenedor_titulo {
+  grid-row: 1/2;
+  grid-column: 4/5;
+}
+
+.checkbox_contenedor_titulodispositivo {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+
+.checkbox_contenedor_opciones {
+  grid-row: 2/5;
+  grid-column: 4/5;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.checkbox_contenedor_dispositivo {
+  grid-row: 2/5;
+  grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.checkbox_contenedor_titulo h3,
+.checkbox_contenedor_titulodispositivo h3 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+select {
+  padding-left: 1rem;
+}
+
+.button_enviar {
+  color: #fff;
+  background-color: #000;
+  grid-row: 5/6;
+  grid-column: 1/5;
+  width: 8.2rem;
+  height: 2.6rem;
+  margin-bottom: 1rem;
+  border-radius: 107px 107px 107px 107px;
+  -webkit-border-radius: 107px 107px 107px 107px;
+  -moz-border-radius: 107px 107px 107px 107px;
+  justify-self: center;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 1s;
+  }
+}

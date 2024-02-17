@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Edgar Andrada" />
+    <meta
+      description="Programa para generar distintos INSERT sobre 3 tablas de una base de datos"
+    />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/cargafw.css" />
+    <script src="JS/cargafw.js" defer></script>
+    <title>Carga_FW3000</title>
+  </head>
+
+  <body>
+    <div class="primer_contenedor">
+      <main class="main_contenedor">
+        <div class="sidebar_contenedor">
+          <div class="logo_sube">
+            <a href="index.html">
+              <img src="IMG/logo_sube.png" alt="Logo Sube"
+            /></a>
+          </div>
+
+          <a class="sidebar_menu" href="#">Total Lineas</a>
+
+          <a class="sidebar_menu" href="base.html">Base de datos</a>
+          <a class="sidebar_menu" href="cargafw.html">Carga FW3000</a>
+          <a class="sidebar_menu" href="#">Nosotros</a>
+        </div>
+        <div class="pantalla_principal">
+          <div class="container__principal" id="principal">
+            <form class="formulario" onsubmit="script(event)" id="form">
+              <h1>Carga FW 3000 V1.6</h1>
+              <div class="formulario__opcion">
+                <label for="equipamiento">Equipamiento:</label>
+                <select name="" id="equipamiento" required>
+                  <option value="" disabled selected>
+                    Selecciona una opción
+                  </option>
+                  <option value="Validador">Validador</option>
+                  <option value="Consola">Consola</option>
+                </select>
+              </div>
+              <div class="formulario__opcion">
+                <label for="idEmpresa">ID de Empresa:</label
+                ><input
+                  type="text"
+                  id="idEmpresa"
+                  required
+                  title="Ingrese el numero de Empresa"
+                />
+              </div>
+              <div class="formulario__opcion">
+                <label for="tipoTerminal">Tipo de Dispositivo:</label>
+                <select name="" id="tipoTerminal" required>
+                  <option value="" disabled selected>
+                    Selecciona una opción
+                  </option>
+                  <option value="Laser 3080" class="LSRT1000">
+                    Laser 3080
+                  </option>
+                  <option value="Laser 3075">Laser 3075</option>
+                  <option value="Laser 3090">Laser 3090</option>
+                  <option value="Tallion" class="TLLT1000">Tallion</option>
+                  <option value="Sonda">Sonda</option>
+                </select>
+              </div>
+              <div class="formulario__opcion">
+                <label for="idTerminal"
+                  >Número de interno "0" para liberar:</label
+                ><input
+                  type="text"
+                  id="idTerminal"
+                  required
+                  title="Ingrese el numero de Interno"
+                />
+              </div>
+              <div class="formulario__opcion">
+                <label for="version"
+                  >Version (por ejemplo la version 4.14 se carga como
+                  41400):</label
+                ><input
+                  type="text"
+                  id="version"
+                  required
+                  title="Ingrese el número de Versión de FW"
+                />
+              </div>
+              <div class="formulario__opcion">
+                <label for="ruta">Ruta del FW:</label
+                ><input
+                  type="text"
+                  id="ruta"
+                  required
+                  title="Ingrese la ruta del FW"
+                />
+                <h3 class="ejemplos">
+                  Ej ruta Validador:
+                  <span class="span__validador">/NS/FW/</span
+                  >LSR_VAL_V3080_lib0511_fw0414_R002
+                </h3>
+                <h3 class="ejemplos">
+                  Ej ruta Consola:
+                  <span class="span__consola">/NS/FW/CLS/</span
+                  >LSR_T3000_R000_V3090_fw0703
+                </h3>
+              </div>
+              <div class="boton__container">
+                <button type="submit" value="Submit" class="boton__enviar">
+                  Enviar
+                </button>
+                <a href="cargafw.html" class="boton__reset">Limpiar Pantalla</a>
+              </div>
+            </form>
+            <hr />
+            <figure>
+              <a href="#principal" onclick="flecha()"
+                ><img
+                  src="IMG/flechaincio.jpg"
+                  alt="flecha arriba"
+                  style="display: none"
+                  id="flecha"
+              /></a>
+            </figure>
+            <div class="consultas" id="final"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

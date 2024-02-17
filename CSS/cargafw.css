@@ -1,0 +1,288 @@
+/*Scroll*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*Estilos generales*/
+
+.container__principal {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos formulario*/
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  margin: 1.5rem 10vw;
+}
+
+.formulario__opcion {
+  width: 100%;
+  margin: 0.8rem 0;
+}
+h1 {
+  margin-bottom: 1.8rem;
+  margin-top: 0.4rem;
+  text-align: center;
+  color: rgb(40, 21, 110);
+  border-bottom: 1px solid rgb(121, 107, 175);
+  font-size: 2rem;
+}
+
+.formulario__opcion input {
+  font-family: sans-serif;
+  margin-left: 1rem;
+  width: 4.2rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+select {
+  font-family: sans-serif;
+  font-size: 1rem;
+  height: 1.8rem;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+select > option {
+  font-family: sans-serif;
+}
+
+select:hover,
+input:hover {
+  opacity: 0.65;
+}
+
+#ruta {
+  width: 27rem;
+  font-size: 1rem;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(42, 134, 97);
+  border-bottom: 0.2px solid #697;
+}
+
+.boton__enviar {
+  border: none;
+  width: 9rem;
+  height: 2.2rem;
+  font-size: 1.2rem;
+  background-color: #26d;
+  color: #fff;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.boton__reset {
+  font-style: none;
+  border: none;
+  width: 9rem;
+  height: 2.2rem;
+  font-size: 1rem;
+  background-color: rgb(12, 14, 17);
+  color: #fff;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding-top: 6.2px;
+  padding-left: 14px;
+  text-decoration: none;
+}
+
+.boton__copiar {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: none;
+  width: 12rem;
+  height: 2.2rem;
+  font-size: 1.3rem;
+  background-color: rgb(110, 114, 111);
+  color: #ffffff;
+  align-self: center;
+  user-select: none;
+}
+
+/*FLECHAS*/
+
+#flecha {
+  position: fixed;
+  width: 10%;
+  top: 35vh;
+  left: 85vw;
+  opacity: 0.8;
+  width: 5.2rem;
+}
+
+/*Estilos consultas SQL*/
+
+.consultas {
+  display: flex;
+  flex-direction: column;
+  width: 54vw;
+  margin: 2rem 10vw;
+}
+
+.consultas__SQL,
+.sudobash {
+  margin-top: 1rem;
+  color: #b6b5b5;
+  font-weight: 600;
+  font-size: 0.82rem;
+  background-color: #020202;
+  padding: 14px;
+}
+
+.consultas__SQL {
+  margin: 0.2rem 1.3rem;
+  font-size: 0.95rem;
+}
+
+h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: black;
+  font-weight: 600;
+  user-select: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.span__validador {
+  color: blue;
+}
+
+.span__consola {
+  color: red;
+}
+
+.boton__container {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid rgb(121, 107, 175);
+  width: 56vw;
+  margin: 0 10vw;
+}
+
+/*Hover botones */
+
+.boton__enviar:hover,
+.boton__copiar:hover {
+  opacity: 0.85;
+  border: 2px solid rgb(16, 16, 17);
+}
+
+.boton__reset:hover {
+  opacity: 0.85;
+  border: 2px solid rgb(42, 23, 216);
+}
+
+/*ESTILOS MODO TABLET NETBOOK */
+
+@media screen and (max-width: 1150px) {
+  .formulario {
+    width: 80vw;
+    margin: 2rem 10vw;
+  }
+
+  hr {
+    width: 80vw;
+    margin: 0 10vw;
+  }
+
+  .consultas {
+    width: 80vw;
+    margin: 2rem 10vw;
+  }
+
+  #flecha {
+    left: 90vw;
+    width: 4rem;
+  }
+}
+
+@media screen and (max-width: 1150px) and (max-height: 650px) {
+  .formulario__opcion {
+    margin-top: 0.6rem;
+  }
+
+  .boton__container {
+    margin-top: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 1050px) and (max-height: 580px) {
+  label {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+  }
+
+  .formulario__opcion {
+    margin: 0.42rem;
+  }
+
+  .consultas__SQL {
+    height: 15rem;
+    font-size: 0.7rem;
+  }
+
+  .formulario__opcion input {
+    width: 4rem;
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .boton__container {
+    margin-top: 1rem;
+  }
+
+  .boton__copiar {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  select {
+    height: 1.7rem;
+  }
+
+  .boton__copiar,
+  .boton__reset,
+  .boton__enviar {
+    font-size: 0.9rem;
+    width: 7.8rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 780px) and (max-height: 520px) {
+  label {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .consultas__SQL {
+    height: 17.5rem;
+  }
+}
