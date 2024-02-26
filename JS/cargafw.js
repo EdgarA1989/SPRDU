@@ -16,7 +16,6 @@ const equipamientoSelect = document.getElementById("equipamiento");
 equipamientoSelect.addEventListener("change", function () {
   const t1000Laser = document.querySelector(".LSRT1000");
   const t1000Tallion = document.querySelector(".TLLT1000");
-  console.log(equipamientoSelect);
 
   if (equipamientoSelect.value === "Consola") {
     t1000Laser.style.display = "none"; // Utilizar .style.display en lugar de setAttribute
@@ -203,9 +202,9 @@ function script(event) {
 
   //FUNCION PARA COPIAR EL TEXTO.
   copiar.addEventListener("click", function () {
-    var contenidoDiv = divConsultas.innerText;
+    const contenidoDiv = divConsultas.innerText;
 
-    var textarea = document.createElement("textarea");
+    const textarea = document.createElement("textarea");
     textarea.value = contenidoDiv;
 
     document.body.appendChild(textarea);

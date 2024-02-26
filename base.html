@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/base.css" />
     <script src="JS/base.js" defer></script>
     <script src="JS/index.js" defer></script>
+    <script src="JS/consultasBD.js" defer></script>
   </head>
   <body>
     <div class="primer_contenedor">
@@ -74,46 +75,54 @@
           <!--Formuluario para consultas SQL-->
 
           <div class="consulta_busqueda_versionactiva">
-            <form action="" class="formulario_versionactiva formulario_general"
-            id="form">
+            <form class="formulario_versionactiva formulario_general"
+            id="form" action="submit">
+
+            <div class="version_updated">
+              <label for="version">Version</label>
+              <select name="opcionVersion" id="opcionVersion">
+                  <option value="Todos">Todos</option>
+                  <option value="PorVersion">Por Version/nes</option>
+              </select>
+              
+            </div>
+            <div class="mas_version">
+              <input type="text" id="version" disabled required style="margin-right:0px;"></input>
+              <span class="span_mas">➕</span><span class="span_menos">➖</span>
+            </div>
+            <div class="condicion">
+              <label for="igual">Igual</label>
+              <input type="checkbox" value="igual" name="igual" checked="true" class="igual">
+
+              <label for="distinto">Distinto</label>
+              <input type="checkbox" value="distinto" name="distinto" class="distinto">
+            </div>
               <div class="empresa_consulta_contenedor">
                 <label for="id_empresa">ID Empresas</label>
-                <select name="idEmpresa" id="id_empresa_versionactiva">
-                    
-                  <option value="">Selecciona una opción</option>
+                <select name="idEmpresa" id="id_empresa">
                   <option value="empresa_todos">Todos</option>
+                  <option value="ingreso_manual">Ingreso manual</option>
                 </select>
+                <span class="volver">👈</span>
               </div>
 
-              <div class="version_updated">
-                <label for="version">Version</label>
-                <select name="opcionVersion" id="opcionVersion">
-                    <option value="" disabled selected>
-                      Selecciona una opción
-                    </option>
-                    <option value="Todos">Todos</option>
-                    <option value="PorVersion">Por Version/nes</option>
-                </select>
-                
-              </div>
-              <div class="mas_version">
-                <input type="text" id="version" disabled required></input>
-                <span class="span_mas">+</span><span class="span_menos">-</span>
-              </div>
+       
               <div class="interno_updated">
                 <label for="idTerminal">Interno</label>
                 <select name="opcionInterno" id="opcionInterno">
-                    <option value="" disabled selected>
-                      Selecciona una opción
-                    </option>
                     <option value="Todos">Todos</option>
                     <option value="PorInterno">Por Interno/s</option>
                 </select>
               </div>
-              <div class="mas_internos">
-              <input type="text"  id="idTerminal" disabled required></input>
-              <span class="span_mas">+</span><span class="span_menos">-</span>
-            </div>
+              <div class="form_internos">
+                <div class="mas_internos">
+                <input type="text"  id="idTerminal" class="idTerminal" disabled required style="margin-right:0px;"></input>
+              
+                </div>
+                <div class="span_internos">
+                <span class="agregar_interno">➕</span><span class="quitar_interno">➖</span>
+                  </div>
+              </div>
               <div class="checkbox_contenedor_titulodispositivo">
                 <h3>Dispositivo</h3>
               </div>
@@ -224,13 +233,12 @@
                   Todos
                 </label>
               </div>
-
-            
-
-              <button type="submit" class="button_enviar">CONSULTAR</button>
-            </form>
-          </div>
-        </div>
+              <button type="submit" value="Submit" class="button_enviar">CONSULTAR</button>
+            </form>      
+          </div> 
+          <div id="final"></div>    
+        </div> 
+          
       </main>
     </div>
   </body>

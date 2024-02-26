@@ -20,11 +20,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
+  scroll-behavior: smooth;
 }
 
 html,
 body {
-  height: 100%; /* Asegurar que el HTML y el body ocupen toda la altura */
+  height: 100%;
 }
 
 .primer_contenedor {
@@ -41,11 +42,11 @@ body {
 
 .sidebar_contenedor {
   position: fixed;
-  width: 16rem;
+  width: 14rem;
   height: 100%;
   background-color: #5ac1f8;
   display: grid;
-  grid-template-rows: 10rem repeat(4, 3rem) 1fr;
+  grid-template-rows: 7.5rem repeat(4, 2.6rem) 1fr;
 }
 
 .logo_sube {
@@ -57,7 +58,7 @@ body {
 }
 
 .logo_sube img {
-  width: 7rem;
+  width: 5rem;
   z-index: 1;
   &:hover {
     animation: sidebarOpciones 2s ease 0s 1 normal forwards;
@@ -65,20 +66,21 @@ body {
 }
 
 .sidebar_menu {
-  padding: 1.7rem;
+  padding: 0.6rem;
 }
 
 .sidebar_contenedor a {
   text-decoration: none;
-  font-size: 1.2rem;
+  text-align: center;
+  font-size: 1.25rem;
   font-weight: 900;
   color: rgb(7, 7, 7);
   &:hover {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     animation: sidebarOpciones 1.6s ease 0s 1 normal forwards;
   }
 }
 
 .pantalla_principal {
-  margin-left: 16rem;
+  margin-left: 13.6rem;
 }

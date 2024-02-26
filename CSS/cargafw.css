@@ -1,9 +1,3 @@
-/*Scroll*/
-
-html {
-  scroll-behavior: smooth;
-}
-
 /*Estilos generales*/
 
 .container__principal {
@@ -25,12 +19,12 @@ html {
   margin: 0.8rem 0;
 }
 h1 {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.7rem;
   margin-top: 0.4rem;
   text-align: center;
   color: rgb(40, 21, 110);
   border-bottom: 1px solid rgb(121, 107, 175);
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .formulario__opcion input {
